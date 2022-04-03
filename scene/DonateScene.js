@@ -70,19 +70,6 @@ exports.startDonateHandler =  ctx =>{
   return ctx.wizard.selectStep(6)
 }
 
-// exports._Continues = Telegraf.action("continue", async ctx=>{
-//   console.log("from continue")
-//   return ctx.wizard.selectStep(1)
-// }) 
-
-// exports.Next = Telegraf.hears("next", async ctx=>{
-//   return ctx.wizard.selectStep(1)
-// }) 
-
-// exports.Cancle = Telegraf.hears("cancle", async ctx=>{
-//   return ctx.scene.leave()
-// }) 
-
 exports.finished = ctx =>{
   console.log("From Finished")
   ctx.reply("Thanks fory Time",keyboard)
