@@ -1,0 +1,20 @@
+{
+  "name": "amahric-corps-collector-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon indes.js",
+    "prod": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "https": "^1.0.0",
+    "nodemon": "^2.0.15",
+    "telegraf": "^4.6.0"
+
+  }
+}
