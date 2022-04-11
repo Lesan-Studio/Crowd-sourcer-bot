@@ -1,11 +1,11 @@
 {
-  "name": "amahric-corps-collector-bot",
+  "name": "crowd-sourcer-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "a telegram bot to collect amharic read speech and verify it from the crowd with the crowd",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon indes.js",
-    "prod": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,5 @@
     "https": "^1.0.0",
     "nodemon": "^2.0.15",
     "telegraf": "^4.6.0"
-
   }
 }
