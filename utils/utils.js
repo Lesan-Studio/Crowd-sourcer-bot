@@ -1,27 +1,20 @@
-const { Markup } = require('telegraf')
+const { Markup } = require('telegraf');
 
 exports.keyboard = Markup.keyboard([
-    ['Donate', 'Verify'], 
-    ['Statistics', 'About Us'],
-  ])
-  .oneTime()
-  .resize()
-
-exports.keyboard_continue_cancle = Markup.keyboard([
-  ['continue', 'cancle'],
+  ['Donate', 'Verify'],
+  ['Statistics', 'About Us'],
 ])
-.oneTime()
-.resize() 
-    
-exports.recording_keybored = Markup.keyboard([
-      ['send', 're-recored'],
-    ])
-    .oneTime()
-    .resize()
+  .oneTime()
+  .resize();
 
-exports.next_cancle= Markup.keyboard([
-      ['next', 'cancle'],
-    ])
-    .oneTime()
-    .resize()     
-  
+exports.keyboard_continue_cancel = Markup.keyboard([['continue', 'cancel']])
+  .oneTime()
+  .resize();
+
+exports.recording_keyboard = Markup.keyboard([['send', 're-record']])
+  .oneTime()
+  .resize();
+
+exports.next_cancel = Markup.keyboard([['next', 'cancel']])
+  .oneTime()
+  .resize();
