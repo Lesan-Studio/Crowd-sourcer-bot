@@ -8,7 +8,7 @@ const {
 
 const { keyboard } = require('./utils/utils');
 
-const bot = new Telegraf(process.env.BOT_TOKEN0 + ':' + process.env.BOT_TOKEN1);
+const bot = new Telegraf(process.env.BOT_TOKEN);
 
 const {
   finished,
@@ -60,3 +60,11 @@ bot.hears('Statistics', (ctx) => {
 });
 bot.command('/info', (ctx) => ctx.scene.enter('infoScene'));
 bot.launch();
+
+bot.catch((err) => {
+  console.log('Ooops', err);
+});
+
+// Enable graceful stop
+process.once('SIGINT', () => bot.stop('SIGINT'));
+process.once('SIGTERM', () => bot.stop('SIGTERM'));

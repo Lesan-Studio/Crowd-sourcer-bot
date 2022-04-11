@@ -1,5 +1,7 @@
 # Lesan crowd sourcer bot
 
+[@LesanEarBot](https://t.me/LesanEarBot)
+
 A Telegram Bot that allows for crowd sourced Amharic Speech and Text Data Collection and validation.
 
 ```
