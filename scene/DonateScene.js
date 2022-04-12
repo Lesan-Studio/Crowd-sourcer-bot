@@ -67,6 +67,7 @@ exports.startDonateHandler = (ctx) => {
   console.log(`start donating, counter${ctx.session.counter}`);
 
   if (ctx.session.counter > 0) {
+    // TODO: FIX UP MESSAGES FROM A TEXT STORAGE
     ctx.reply(`This is the ${ctx.session.counter} sentence`, remove_keyboard);
     return ctx.wizard.selectStep(2);
   } else {
