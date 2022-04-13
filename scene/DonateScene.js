@@ -1,4 +1,5 @@
 const { Telegraf, Markup } = require('telegraf');
+const cloudinary = require('cloudinary').v2;
 
 const {
   keyboard,
@@ -9,6 +10,14 @@ const {
 
 const fs = require('fs');
 var https = require('https');
+
+// TODO:  Fill out with Cloudinary config
+cloudinary.config({
+  cloud_name: 'sample',
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.API_SECRET,
+  secure: true,
+});
 
 const remove_keyboard = Markup.removeKeyboard();
 
@@ -45,6 +54,14 @@ exports.sendVoice = Telegraf.hears('send', async (ctx) => {
       var file = fs.createWriteStream(`lib/voices/${ctx.session.message}.wav`);
       https.get(url.href, function (response) {
         response.pipe(file);
+      });
+
+      cloudinary.uploader.upload(file, function (error, result) {
+        if (error) {
+          console.log(error);
+        }
+        console.log(result);
+        ctx.telegram.sendVoice(ctx.chat.id, result.url);
       });
     })
     .then(() => {
