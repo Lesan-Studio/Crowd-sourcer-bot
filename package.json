@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cloudinary": "^1.29.0",
+    "cloudinary": "^1.37.3",
     "dotenv": "^16.0.0",
     "https": "^1.0.0",
-    "nodemon": "^2.0.15",
+    "nodemon": "^3.0.0",
     "telegraf": "^4.6.0"
   }
 }
